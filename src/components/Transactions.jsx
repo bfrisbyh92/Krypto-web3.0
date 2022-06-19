@@ -6,7 +6,7 @@ import useFetch from '../hooks/useFetch';
 
 const TransactionCard = ({addressTo, addressFrom, timestamp, message, keyword, amount, url}) => {
 
-      const gifUrl = useFetch({ keyword })
+      const gifUrl = useFetch({ keyword });
       console.log(gifUrl);
 
   return(
@@ -40,8 +40,11 @@ const TransactionCard = ({addressTo, addressFrom, timestamp, message, keyword, a
             </>
           )}
 
+          </div>
+
           <img
-            src={gifUrl /*|| url */}
+          // source of the gifUrl we are getting from GIF API
+            src={gifUrl || url}
             alt="gif"
             className="w-full h-64 2x:h-96 rounded-md shadow-lg object-cover"
           />
@@ -50,8 +53,7 @@ const TransactionCard = ({addressTo, addressFrom, timestamp, message, keyword, a
               <p className="text-[#37c7da] font-bold">
                 {timestamp}
               </p>
-          </div>
-
+              
           </div>
         </div>
     </div>

@@ -1,9 +1,10 @@
-import {HiMenu, HiMenuAlt4} from 'react-icons/hi';
+import {/*HiMenu,*/ HiMenuAlt4} from 'react-icons/hi';
 import {AiOutlineClose} from 'react-icons/ai';
 import {useState} from 'react';
 
 // import logo from '../images/logo';
 const logo = 'https://raw.githubusercontent.com/adrianhajdin/project_web3.0/main/client/images/logo.png'
+// ^^^ Importing the logo that appears on top of the page -- need to change logo later ^^^
 
 const NavbarItem = ({title,classProps}) => {
         return <li className={`mx-4 cursor-pointer ${classProps}`}>
@@ -17,7 +18,7 @@ const Navbar = () => {
     return (
         <nav className="w-full flex md:justify-center justify-between items-center p-4">
         <div className="md:flex-[0.5] flex-initial justify-center items-center">
-        <img src={logo} alt={logo} className='w-32 cursor-pointer'></img>
+        <img src={logo} alt={""} className='w-32 cursor-pointer'></img>
         </div>
         <ul className="text-white md:flex 
                     hidden list-none
